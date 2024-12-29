@@ -1,0 +1,70 @@
+/* superadmin.css */
+
+/* Super Admin Dashboard */
+.super-admin-dashboard {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.super-admin-section {
+    flex: 1 1 45%;
+    margin: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.super-admin-section h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.book-info, .user-info {
+    margin-bottom: 30px;
+}
+
+.book-item, .user-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.book-item span, .user-item span {
+    font-size: 16px;
+}
+
+.approve-button, .reject-button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.approve-button {
+    background-color: #28a745;
+    color: white;
+}
+
+.reject-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+.approve-button:hover, .reject-button:hover {
+    opacity: 0.8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .super-admin-dashboard {
+        flex-direction: column;
+    }
+
+    .super-admin-section {
+        flex: 1 1 100%;
+    }
+}

@@ -1,4 +1,3 @@
-
 package cn.edu.xju.librarymanagementsystem.controller;
 
 import cn.edu.xju.librarymanagementsystem.pojo.Result;
@@ -14,13 +13,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class LibrarianApprovalController {
     @Autowired
     private LibrarianApprovalService librarianApprovalService;
-
+    
     @GetMapping("/librarianApproval/allInfo")
     public Result allInfo() {
         log.info("查询所有未审批借阅信息");
         return Result.success(librarianApprovalService.selectAll());
     }
-
+    
     @GetMapping("/librarianApproval/pass")
     public Result pass(@RequestParam String userId, @RequestParam String bookId) {
         if (librarianApprovalService.pass(userId, bookId)) {
@@ -31,7 +30,7 @@ public class LibrarianApprovalController {
             return Result.fail("未知原因未通过");
         }
     }
-
+    
     @GetMapping("/librarianApproval/noPass")
     public Result noPass(@RequestParam String userId, @RequestParam String bookId) {
         if (librarianApprovalService.notPass(userId, bookId)) {
